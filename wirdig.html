@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href = "wirdig.css">
+    <link rel = "stylesheet" href = "UTS-Pemweb.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+
+    <header>
+        <div class="logo">
+            <img class="VibeForge" src="LOGO.png">VibeForge
+        </div>
+        <section class="header-center">
+            <nav>
+                <a href="/PROJEK AKHIR_PEMWEB/PROJEK PEMWEB AKHIR/tampilan awal/film.html" class="active">Home</a>
+                <a href="/Genre/MovieList.html">About Us</a>
+                <a href="/Handling/profile.php">Pricing</a>
+                <a href="/PROJEK AKHIR_PEMWEB/PROJEK PEMWEB AKHIR/homepage/index.html">Contact Us</a>
+            </nav>
+        </section>
+    </header>
+        <section class="home">
+            <h3>VibeForge</h3>
+        </section>
+
     <div class="container">
         <section class="intro">
             <h2>
@@ -46,9 +64,35 @@
         </div>
 
         <section class="aboutus">
+            <div class="lineup">
+                <h2 class="heading">ABOUT US</h2>
+                <p class="isi">At VibeForge, we specialize in delivering high-quality, visually captivating design services tailored to meet your unique needs. Whether you're looking to create an engaging PowerPoint presentation or a striking poster, our team of creative experts works closely with you to transform your ideas into impactful visual stories. We combine innovative design techniques with a deep understanding of your goals, ensuring that every slide and every print piece not only looks amazing but communicates your message clearly and effectively. From concept to final product, our designs are crafted to leave a lasting impression and elevate your brand's presence.</p>
+            </div>
+            <div class="image-container"><img class="foto1" src="LOGO.png" alt="Logo"><img class="foto2" src="/BACKDROP FILM (7).png" alt="Backdrop">
+            </div>
         </section>
+        
 </div>
 
+<script>
+    let lastScrollTop = 0;
 
+    window.addEventListener("scroll", function() {
+        let header = document.querySelector("header");
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            header.classList.add("sticky");
+        } else {
+            // Scrolling up
+            if (scrollTop <= 0) {
+                header.classList.remove("sticky");
+            }
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+</script>
 </body>
 </html>
